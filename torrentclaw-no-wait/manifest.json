@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "TorrentClaw 磁力链接免等待",
+  "version": "1.0.0",
+  "description": "跳过 TorrentClaw 打开和复制磁力链接时的倒计时。",
+  "minimum_chrome_version": "111",
+  "content_scripts": [
+    {
+      "matches": ["https://torrentclaw.com/*"],
+      "js": ["skip-wait.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
